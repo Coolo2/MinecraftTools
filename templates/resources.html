@@ -1,0 +1,46 @@
+
+<html>
+    <head>
+        <title>Resource Browser</title>
+        <link rel="stylesheet" href="/static/css/global.css">
+        <link rel="stylesheet" href="/static/css/resources.css">
+        <link rel="stylesheet" href="https://unpkg.com/balloon-css/balloon.min.css">
+    </head>
+    <body>
+        <example id="example-result">
+            <div class="result" id="result-{self_id}">
+                <span id="result-{self_id}" aria-label="This is a plugin from the {site} website" data-balloon-pos="left"><img class="result-site" src="/static/images/{site}.png"></span>
+                <img id="result-{self_id}" class="result-icon" src="{icon}">
+                <div id="result-{self_id}" class="result-title">{name}</div>
+                <div id="result-{self_id}" class="result-description">{description}</div>
+            </div>
+        </example>
+        <div id="selected" style="display:none">
+            <div id="selected-card">
+                <span aria-label="This is a plugin from the {site} website" data-balloon-pos="left" id="selected-site-balloon"><img class="result-site" src="/static/images/{site}.png" id="selected-site"></span>
+                <img class="result-icon" src="{icon}" id="selected-icon">
+                <div class="result-title" id="selected-name">{name}</div>
+                <div class="selected-description" id="selected-description">{description}</div>
+            </div>
+            <a id="selected-view" class="a-button">View on </a>
+            <a id="selected-download" class="a-button">Download Plugin</a>
+            <div id="selected-info">
+                <h3>API</h3>
+                <p>This plugin is a <span id="selected-api"></span> plugin</p>
+                <h3>Downloads</h3>
+                <p>This plugin has <span id="selected-downloads"></span> downloads</p>
+            </div>
+        </div>
+        
+        
+        <h1>Resource Browser for Minecraft servers</h1>
+        <br>
+        <input placeholder="Search for a plugin" id="search-query">
+        <button id="search-submit">Search</button>
+        <br>
+        <div id="results"></div>
+        <div class="lds-dual-ring" id="spinner" style="display:none"></div>
+    </body>
+</html>
+<script src="/static/js/global.js"></script>
+<script src="/static/js/resources.js"></script>

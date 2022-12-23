@@ -1,0 +1,101 @@
+
+::-webkit-scrollbar {
+    width: 20px;
+}
+::-webkit-scrollbar-track {
+    background: rgb(0, 0, 0); 
+}
+::-webkit-scrollbar-thumb {
+    background: var(--scroll-gray); 
+    box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    border-bottom:4px solid var(--scroll-outline);
+    border-right:4px solid var(--scroll-outline);
+    cursor:pointer
+}
+
+@font-face {
+    font-family: 'Minecraft';
+    src: url('/static/Minecraft.ttf') format('truetype');
+} 
+
+:root {
+    --border-gray:#6A6968;
+    --scroll-gray:#C0C0C0;
+    --scroll-outline:#808080;
+    --button-gray:#6F6F6F;
+}
+
+.lds-dual-ring {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+
+    position:absolute;
+    bottom:25px;
+    right:25px;
+}
+
+.lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid white;
+    border-color: white transparent white transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+    
+    
+}
+@keyframes lds-dual-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+body {
+    background-image: url(/static/images/background.webp);
+    
+    image-rendering:pixelated;
+    font-family: 'Minecraft';
+    color:white;
+
+}
+
+input {
+    font-family:'Minecraft';
+    font-size:25px;
+    padding:10px 20px 10px 20px;
+    color:white;
+    background-color:rgb(0, 0, 0, 0.8);
+    border:2px solid var(--border-gray);
+}
+input:focus {
+    outline: none;
+    border: 2px solid white
+}
+
+button {
+    font-family:'Minecraft';
+    font-size:25px;
+    padding:10px 20px 10px 20px;
+    background-color:var(--scroll-gray);
+    border:2px solid black;
+    cursor:pointer;
+    box-shadow:inset -2px -2px 0px 2px var(--button-gray);
+}
+button:hover {
+    background-color:var(--button-gray);
+    box-shadow:inset -2px -2px 0px 2px var(--scroll-gray);
+}
+
+example {
+    display:none
+}
